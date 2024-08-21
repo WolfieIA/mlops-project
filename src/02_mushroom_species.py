@@ -7,30 +7,25 @@ model = load_model('models/mushroom_species_model')
 
 def predict(model, input_df):
     predictions_data = predict_model(estimator=model, data=input_df)
-    predictions = predictions_data['Label'][0]
+    predictions = predictions_data['prediction_label'][0]
     return predictions
 
 def run():
     from PIL import Image
-    mushroom_header = Image.open('statics/img/mushroom_header.png')
-    mushroom = Image.open('statics/img/mushroom.jpg')
-    st.image(mushroom_header)
+    mushroom_header = Image.open('src/statics/img/mushroom_header.png')
+    mushroom = Image.open('src/statics/img/mushroom.jpg')
+    st.image(mushroom_header, width=700)
     
     
     st.sidebar.info('This app is created to predict mushroom species')
-    st.sidebar.success('https://www.pycaret.org')
-
-    st.sidebar.image(mushroom)
+    st.sidebar.image(mushroom, width=300) 
 
     st.title("Predicting Mushroom Species")
 
     cap_shape = st.selectbox("Cap Shape", ['convex', 'bell', 'sunken', 'flat', 'knobbed', 'conical'])
     cap_surface = st.selectbox("Cap Surface", ['smooth', 'scaly', 'fibrous', 'grooves'])
     cap_color = st.selectbox("Cap Color", ['brown', 'yellow', 'white', 'gray', 'red', 'pink', 'buff', 'purple', 'cinnamon', 'green'])
-    if st.checkbox("Bruises"):
-        bruises = 'bruises'
-    else:
-        bruises = 'no'
+    bruises = st.selectbox("Bruises", ['bruises', 'no'])
     odor = st.selectbox("Odor", ['pungent', 'almond', 'anise', 'none', 'foul', 'creosote', 'fishy', 'spicy', 'musty'])
     gill_attachment = st.selectbox("Gill Attachment", ['free', 'attached'])
     gill_spacing = st.selectbox("Gill Spacing", ['close', 'crowded'])
@@ -77,9 +72,12 @@ def run():
 
     input_df = pd.DataFrame.from_dict(input_dict)
 
+    # Prediction button
     if st.button("Predict"):
         prediction = predict(model, input_df)
-    
-    st.success(f"The predicted mushroom species is {prediction}")
+        st.success(f"The predicted mushroom species is {prediction}")
+    else:
+        st.write("Click the button to get a prediction.")
 
-    
+if __name__ == "__main__":
+    run() 
