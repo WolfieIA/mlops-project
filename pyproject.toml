@@ -2,7 +2,7 @@
 name = "mlops-project"
 version = "0.1.0"
 description = ""
-authors = ["Lan Nguyen"]
+authors = ["Team 1"]
 
 [tool.poetry.dependencies]
 python = "3.10"
