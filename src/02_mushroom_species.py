@@ -17,7 +17,8 @@ def run():
     st.image(mushroom_header, width=700)
     
     
-    st.sidebar.info('This app is created to predict mushroom species')
+    st.sidebar.info('This app is created to predict whether a mushroom is edible or poisonous based on its features. Please adjust the features accordingly.')
+    st.sidebar.text('Done by: Lan (221520B)')
     st.sidebar.image(mushroom, width=300) 
 
     st.title("Predicting Mushroom Species")
