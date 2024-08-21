@@ -21,7 +21,7 @@ def run():
     st.sidebar.text('Done by: Lan (221520B)')
     st.sidebar.image(mushroom, width=300) 
 
-    st.title("Predicting Mushroom Species")
+    st.title("Predicting Mushroom Edibility")
 
     cap_shape = st.selectbox("Cap Shape", ['convex', 'bell', 'sunken', 'flat', 'knobbed', 'conical'])
     cap_surface = st.selectbox("Cap Surface", ['smooth', 'scaly', 'fibrous', 'grooves'])
