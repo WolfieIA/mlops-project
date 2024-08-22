@@ -2,6 +2,14 @@ from pycaret.classification import load_model, predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
+st.set_page_config(page_title="Page 2", page_icon="📈")
+
+st.markdown("# Page 2 📈")
+st.sidebar.header("mushroom species")
+st.write(
+    """This is page 1 of your app. Add your functionality here!"""
+)
+
 
 model = load_model('models/mushroom_species_model')
 
