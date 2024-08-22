@@ -3,8 +3,18 @@ import pandas as pd
 import pickle
 from pycaret.anomaly import load_model, predict_model
 
+st.set_page_config(page_title="Page 1", page_icon="📈") 
+ 
+st.markdown("# Page 1 📈") 
+st.sidebar.header("Page 1") 
+st.write( 
+    """This is page 1 of your app. Add your functionality here!""" 
+    )
+st.title("Transaction Anomaly Detection")
+
 # Load the PyCaret model
 model = load_model('iforest_anomaly_detection_pipeline')
+
 
 def preprocess_input(data):
     # Convert the input data to a DataFrame
@@ -34,7 +44,7 @@ def predict(data):
     return anomaly_label, anomaly_score
 
 def main():
-    st.title("Transaction Anomaly Detection")
+
 
     # Create input fields for user data
     fiscal_year = st.text_input("Fiscal Year")
