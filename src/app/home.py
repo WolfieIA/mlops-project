@@ -17,21 +17,21 @@ def home():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.subheader("Singapore Resale Price Prediction")
+        st.subheader("Singapore Resale Price Prediction (Azrul)")
         st.image("src/statics/img/HDB.jpg", use_column_width=True)
         st.write("Predict housing prices in Singapore based on various features.")
         if st.button("Go to Singapore Resale Price Prediction"):
             st.switch_page("pages/01_residential.py")
 
     with col2:
-        st.subheader("Mushroom Edibility Prediction")
+        st.subheader("Mushroom Edibility Prediction (Lan)")
         st.image("src/statics/img/mushroom_header.png", use_column_width=True)
         st.write("Determine if a mushroom is edible or poisonous based on its characteristics.")
         if st.button("Go to Mushroom Edibility Prediction"):
             st.switch_page("pages/02_mushroom_species.py")
 
     with col3:
-        st.subheader("Transaction Anomaly Detection")
+        st.subheader("Transaction Anomaly Detection (Raphael)")
         st.image("src/statics/img/transaction.jpg", use_column_width=True)
         st.write("Detect anomalies in financial transactions to prevent fraud.")
         if st.button("Go to Transaction Anomaly Detection"):
