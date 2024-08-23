@@ -3,17 +3,19 @@ import pandas as pd
 import numpy as np
 from pycaret.regression import load_model, predict_model
 import math
+from PIL import Image
 
 
-st.set_page_config(page_title="Page 1", page_icon="📈")
+st.set_page_config(page_title="Singapore Resale Price Prediction", page_icon="📈")
 
-st.markdown("# Page 1 📈")
-st.sidebar.header("Page 1")
-st.write(
-    """This is page 1 of your app. Add your functionality here!"""
-)
+st.markdown("# Singapore Resale Price Prediction 📈")
+st.sidebar.header("Singapore Resale Price Prediction")
+hdb_image = Image.open('src/statics/img/HDB.jpg')
+st.image(hdb_image, width=700)
+st.sidebar.info('This app is created to predict the housing price. Please adjust the features accordingly.')
+st.sidebar.text('Done by: Azrul (223888Z)')
 # Load the PyCaret model
-model = load_model('best_model_regression')
+model = load_model('models/best_model_regression')
 
 def predict(data):
     # Convert the input data to a DataFrame
@@ -31,7 +33,7 @@ def predict(data):
     return actual_prediction
 
 def main():
-    st.title("Singapore Resale Price Prediction")
+    st.title("Input your housing particular")
 
     # Input fields
     block = st.text_input("Block")
