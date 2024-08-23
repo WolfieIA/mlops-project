@@ -15,7 +15,13 @@ def run():
     mushroom_header = Image.open('src/statics/img/mushroom_header.png')
     mushroom = Image.open('src/statics/img/mushroom.jpg')
     st.image(mushroom_header, width=700)
-    
+    st.set_page_config(page_title="Page 1", page_icon="📈") 
+ 
+    st.markdown("# Page 2 📈") 
+    st.sidebar.header("Page 2") 
+    st.write( 
+        """This is page 1 of your app. Add your functionality here!""" 
+    )
     
     st.sidebar.info('This app is created to predict whether a mushroom is edible or poisonous based on its features. Please adjust the features accordingly.')
     st.sidebar.text('Done by: Lan (221520B)')
