@@ -1,4 +1,4 @@
-# mlops-project
+# Machine Learning Operations
 
 ## Tools used in this project
 * [Poetry](https://towardsdatascience.com/how-to-effortlessly-publish-your-python-package-to-pypi-using-poetry-44b305362f9f): Dependency management - [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
@@ -51,3 +51,23 @@ To auto-generate API document for your project, run:
 ```bash
 make docs
 ```
+
+# Machine Learning Operations
+
+## Description
+
+This project is a web app that showcases three different prediction models using Streamlit. The app allows users to interact with and visualize predictions based on various datasets.
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/yourproject.git
+   cd yourproject
