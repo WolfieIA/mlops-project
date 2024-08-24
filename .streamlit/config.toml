@@ -1,5 +1,4 @@
 [theme]
 base = "dark"
-primaryColor = "green"
-secondaryBackgroundColor = "green"
+primaryColor = "#0F9D58"
 font = "monospace"
