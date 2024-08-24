@@ -7,10 +7,6 @@ st.set_page_config(page_title="Mushroom Prediction", page_icon="📈")
 
 st.markdown("# Mushroom Prediction 📈")
 st.sidebar.header("Mushroom Prediction")
-st.write(
-    """This is page 1 of your app. Add your functionality here!"""
-)
-
 model = load_model('models/mushroom_species_model')
 
 def predict(model, input_df):

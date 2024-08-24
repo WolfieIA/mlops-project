@@ -4,7 +4,7 @@ import pickle
 from pycaret.anomaly import  predict_model
 from PIL import Image
 st.set_page_config(page_title="Transaction", page_icon="📈") 
- 
+
 st.markdown("# Transaction 📈") 
 st.sidebar.header("Transaction") 
 transaction = Image.open('src/statics/img/transaction.jpg')
