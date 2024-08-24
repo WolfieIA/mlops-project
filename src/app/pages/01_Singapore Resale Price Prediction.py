@@ -33,7 +33,7 @@ def predict(data):
     return actual_prediction
 
 def main():
-    st.title("Input your housing particular")
+    st.info("Please fill in the details of the HDB flat to predict its resale price.",icon="ℹ️")
 
     # Input fields
     block = st.text_input("Block")

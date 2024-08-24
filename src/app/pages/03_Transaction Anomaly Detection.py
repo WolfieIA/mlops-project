@@ -11,7 +11,6 @@ transaction = Image.open('src/statics/img/transaction.jpg')
 st.image(transaction, width=700)
 st.sidebar.info('This app is created to predict the transaction wheather is anormaly or not. Please adjust the features accordingly.')
 st.sidebar.text('Done by: Raphael (210887Y)')
-st.title("Transaction Anomaly Detection")
 
 
 import gzip
@@ -54,7 +53,7 @@ def predict(data):
     return anomaly_label, anomaly_score
 
 def main():
-
+    st.info("Please fill in the details of the transaction to predict if it is an anomaly.",icon="ℹ️")
 
     # Create input fields for user data
     fiscal_year = st.text_input("Fiscal Year")

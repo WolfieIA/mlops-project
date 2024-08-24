@@ -2,8 +2,7 @@ import streamlit as st
 from PIL import Image
 
 def home():
-    st.set_page_config(page_title="Multi-Model Predictor", page_icon="📊", layout="wide")
-
+    st.set_page_config(page_title="Home")
     # Title and introduction
     st.title("Welcome to our Machine Learning Operations App!")
     st.markdown("""
@@ -21,21 +20,21 @@ def home():
         st.image("src/statics/img/HDB.jpg", use_column_width=True)
         st.write("Predict housing prices in Singapore based on various features.")
         if st.button("Go to Singapore Resale Price Prediction"):
-            st.switch_page("pages/01_residential.py")
+            st.switch_page("pages/01_Singapore Resale Price Prediction.py")
 
     with col2:
         st.subheader("Mushroom Edibility Prediction (Lan)")
         st.image("src/statics/img/mushroom_header.png", use_column_width=True)
         st.write("Determine if a mushroom is edible or poisonous based on its characteristics.")
         if st.button("Go to Mushroom Edibility Prediction"):
-            st.switch_page("pages/02_mushroom_species.py")
+            st.switch_page("pages/02_Mushroom Edibility Prediction.py")
 
     with col3:
         st.subheader("Transaction Anomaly Detection (Raphael)")
         st.image("src/statics/img/transaction.jpg", use_column_width=True)
         st.write("Detect anomalies in financial transactions to prevent fraud.")
         if st.button("Go to Transaction Anomaly Detection"):
-            st.switch_page("pages/03_transaction.py")
+            st.switch_page("pages/03_Transaction Anomaly Detection.py")
 
     # Additional information
     st.header("About This App")
