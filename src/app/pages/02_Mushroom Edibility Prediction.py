@@ -19,10 +19,10 @@ def run():
     st.image(mushroom_header, width=700)
 
     
-    st.sidebar.info('This app is created to predict whether a mushroom is edible or poisonous based on its features. Please adjust the features accordingly.',icon="ℹ️")
+    st.sidebar.info('This app is created to predict whether a mushroom is edible or poisonous based on its features. Please adjust the features accordingly.')
     st.sidebar.text('Done by: Lan (221520B)')
 
-    st.info("Please select the features of the mushroom to predict its species.")
+    st.info("Please select the features of the mushroom to predict its species.",icon="ℹ️")
 
     st.subheader("Cap Features")
     cap_shape = st.selectbox("Cap Shape", ['convex', 'bell', 'sunken', 'flat', 'knobbed', 'conical'])
