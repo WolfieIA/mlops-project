@@ -3,10 +3,10 @@ import pandas as pd
 import pickle
 from pycaret.anomaly import  predict_model
 from PIL import Image
-st.set_page_config(page_title="Transaction", page_icon="📈") 
+st.set_page_config(page_title="Transaction", page_icon="📊") 
 
-st.markdown("# Transaction 📈") 
-st.sidebar.header("Transaction") 
+st.markdown("# Transaction Anomaly Detection 📊") 
+st.sidebar.header("Transaction Anomaly Detection") 
 transaction = Image.open('src/statics/img/transaction.jpg')
 st.image(transaction, width=700)
 st.sidebar.info('This app is created to predict the transaction wheather is anormaly or not. Please adjust the features accordingly.')

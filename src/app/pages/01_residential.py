@@ -8,7 +8,7 @@ from PIL import Image
 
 st.set_page_config(page_title="Singapore Resale Price Prediction", page_icon="📈")
 
-st.markdown("# Singapore Resale Price Prediction 📈")
+st.markdown("# Singapore Resale Price Prediction 🏠")
 st.sidebar.header("Singapore Resale Price Prediction")
 hdb_image = Image.open('src/statics/img/HDB.jpg')
 st.image(hdb_image, width=700)

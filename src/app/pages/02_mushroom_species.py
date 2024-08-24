@@ -3,10 +3,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.set_page_config(page_title="Mushroom Prediction", page_icon="📈")
+st.set_page_config(page_title="Mushroom Prediction", page_icon="🍄")
 
-st.markdown("# Mushroom Prediction 📈")
-st.sidebar.header("Mushroom Prediction")
+st.markdown("# Mushroom Edibility Prediction 🍄")
+st.sidebar.header("Mushroom Edibility")
 model = load_model('models/mushroom_species_model')
 
 def predict(model, input_df):

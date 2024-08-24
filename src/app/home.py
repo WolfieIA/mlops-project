@@ -5,7 +5,7 @@ def home():
     st.set_page_config(page_title="Multi-Model Predictor", page_icon="📊", layout="wide")
 
     # Title and introduction
-    st.title("Welcome to my Machine Learning Operation App! 👋")
+    st.title("Welcome to our Machine Learning Operations App!")
     st.markdown("""
     This is the home page of our multi-page app. Select a page from the sidebar to explore different functionalities!
     """)
