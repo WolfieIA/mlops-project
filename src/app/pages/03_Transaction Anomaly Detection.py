@@ -22,7 +22,7 @@ def load_model(filepath):
     return model
 
 # Load the PyCaret model
-model = load_model('models/iforest_anomaly_detection_pipeline.pkl.gz')
+model = load_model('models/iforest_anomaly_detection_pipeline.pkl')
 
 
 def preprocess_input(data):
