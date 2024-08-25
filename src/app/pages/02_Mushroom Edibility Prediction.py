@@ -12,7 +12,7 @@ def predict(model, input_df):
     predictions_data = predict_model(estimator=model, data=input_df)
     predictions = predictions_data['prediction_label'][0]
     score = predictions_data['prediction_score'][0]
-    return predictions
+    return predictions, score
 
 def run():
     from PIL import Image
