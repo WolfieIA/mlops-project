@@ -13,9 +13,6 @@ st.sidebar.info('This app is created to predict the transaction wheather is anor
 st.sidebar.text('Done by: Raphael (210887Y)')
 
 
-import gzip
-import pickle
-
 def load_model(filepath):
     with gzip.open(filepath, 'rb') as f:
         model = pickle.load(f)
