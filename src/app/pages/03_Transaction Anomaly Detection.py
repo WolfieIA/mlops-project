@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from pycaret.anomaly import  predict_model
+from pycaret.anomaly import  predict_model, load_model
 from PIL import Image
 st.set_page_config(page_title="Transaction", page_icon="📊") 
 
@@ -11,12 +11,6 @@ transaction = Image.open('src/statics/img/transaction.jpg')
 st.image(transaction, width=700)
 st.sidebar.info('This app is created to predict the transaction wheather is anormaly or not. Please adjust the features accordingly.')
 st.sidebar.text('Done by: Raphael (210887Y)')
-
-
-def load_model(filepath):
-    with gzip.open(filepath, 'rb') as f:
-        model = pickle.load(f)
-    return model
 
 # Load the PyCaret model
 model = load_model('models/iforest_anomaly_detection_pipeline.pkl')
