@@ -11,6 +11,7 @@ model = load_model('models/mushroom_species_model')
 def predict(model, input_df):
     predictions_data = predict_model(estimator=model, data=input_df)
     predictions = predictions_data['prediction_label'][0]
+    score = predictions_data['prediction_score'][0]
     return predictions
 
 def run():
@@ -94,7 +95,12 @@ def run():
                 st.write(f"- {field}")
 
         else:
-            prediction = predict(model, input_df)
+            prediction, score = predict(model, input_df)
+            if (prediction == 'edible' and score <= 0.5) or (prediction == 'poisonous' and score <= 0.5):
+                st.success(f"""The predicted mushroom species is {prediction.upper()} with a score of {score:.2f}.
+Not Reccomended to eat.""")
+            else:
+                st.success(f"The predicted mushroom species is {prediction.upper()} with a score of {score:.2f}.")
             st.success(f"The predicted mushroom species is {prediction.upper()}", icon="✅")
     else:
         st.warning("Click the button to get a prediction.",  icon="⚠️")
