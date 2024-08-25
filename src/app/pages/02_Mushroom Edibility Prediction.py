@@ -98,9 +98,9 @@ def run():
             prediction, score = predict(model, input_df)
             if (prediction == 'edible' and score <= 0.5) or (prediction == 'poisonous' and score <= 0.5):
                 st.success(f"""The predicted mushroom species is {prediction.upper()} with a score of {score:.2f}.
-Not Reccomended to eat.""")
+Not reccomended to eat.""", icon="✅")
             else:
-                st.success(f"The predicted mushroom species is {prediction.upper()} with a score of {score:.2f}.")
+            st.success(f"The predicted mushroom species is {prediction.upper()} with a score of {score:.2f}.", icon="✅")
             st.success(f"The predicted mushroom species is {prediction.upper()}", icon="✅")
     else:
         st.warning("Click the button to get a prediction.",  icon="⚠️")
