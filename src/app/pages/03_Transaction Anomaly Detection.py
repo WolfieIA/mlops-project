@@ -13,7 +13,7 @@ st.sidebar.info('This app is created to predict the transaction wheather is anor
 st.sidebar.text('Done by: Raphael (210887Y)')
 
 # Load the PyCaret model
-model = load_model('models/iforest_anomaly_detection_pipeline.pkl')
+model = load_model('models/iforest_anomaly_detection_pipeline')
 
 
 def preprocess_input(data):
