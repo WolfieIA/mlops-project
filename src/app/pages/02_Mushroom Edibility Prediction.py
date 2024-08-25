@@ -101,7 +101,6 @@ def run():
 Not reccomended to eat.""", icon="✅")
             else:
                 st.success(f"The predicted mushroom species is {prediction.upper()} withst a score of {score:.2f}.", icon="✅")
-                st.success(f"The predicted mushroom species is {prediction.upper()}", icon="✅")
     else:
         st.warning("Click the button to get a prediction.",  icon="⚠️")
 
