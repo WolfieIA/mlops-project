@@ -89,7 +89,10 @@ def run():
     if st.button("Predict"):
         if input_df.isnull().values.any():
             blank_fields = input_df.columns[input_df.isnull().any()].tolist()
-            st.error(f"Please fill in the following fields: {', '.join(blank_fields)}", icon="🚨")
+            st.error(f"Please fill in the following fields:", icon="❌")
+            for field in blank_fields:
+                st.write(f"- {field}")
+
         else:
             prediction = predict(model, input_df)
             st.success(f"The predicted mushroom species is {prediction.upper()}", icon="✅")
