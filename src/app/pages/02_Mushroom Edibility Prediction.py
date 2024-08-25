@@ -53,7 +53,7 @@ def run():
     veil_color = st.selectbox("Veil Color", ('white', 'brown', 'orange', 'yellow'), placeholder="Choose an option", index=None)
     ring_number = st.selectbox("Ring Number", ('none','one', 'two'), placeholder="Choose an option", index=None)
     ring_type = st.selectbox("Ring Type", ('pendant', 'evanescent', 'large', 'flaring', 'none'), placeholder="Choose an option", index=None)
-
+    st.divider()
     st.subheader("Spore Print, Population, and Habitat Features")
     spore_print_color = st.selectbox("Spore Print Color", ('black', 'brown', 'purple', 'chocolate', 'white', 'green', 'orange', 'yellow', 'buff'), placeholder="Choose an option", index=None)
     population = st.selectbox("Population", ('scattered', 'numerous', 'abundant', 'several', 'solitary', 'clustered'), placeholder="Choose an option", index=None)
